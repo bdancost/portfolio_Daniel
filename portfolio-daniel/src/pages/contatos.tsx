@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 
 const Contatos = () => {
   return (
@@ -9,7 +8,32 @@ const Contatos = () => {
       </Head>
       <div>
         <h1>Contatos</h1>
-        <Link href="/">Ir para Página Inicial</Link>
+        <ul>
+          <li>
+            <span>E-mail</span>
+            <div>
+              <a href="mailto:pr.danfc88@gmail.com">
+                daniel-pr.danfc88@gmail.com
+              </a>
+            </div>
+          </li>
+          <li>
+            <span>LinkedIn</span>
+            <div>
+              <a href="https://www.linkedin.com/in/daniel-fernandes1988/">
+                https://www.linkedin.com/in/daniel-fernandes1988/
+              </a>
+            </div>
+          </li>
+          <li>
+            <span>GitHub</span>
+            <div>
+              <a href="https://github.com/bdancost">
+                https://github.com/bdancost
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
     </>
   );
