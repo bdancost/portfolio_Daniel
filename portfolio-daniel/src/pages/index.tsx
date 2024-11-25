@@ -11,11 +11,9 @@ const Home = () => {
           content="Sou um desenvolvedor Front-end em busca por novos desafios"
         />
       </Head>
-      <main>
-        <div>
-          <AboutMe />
-        </div>
-      </main>
+      <div className="py-12 px-6 md:px-32 space-y-10s md:space-y-28">
+        <AboutMe />
+      </div>
     </>
   );
 };
