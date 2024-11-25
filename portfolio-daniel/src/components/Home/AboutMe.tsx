@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const AboutMe = () => {
@@ -23,9 +24,12 @@ export const AboutMe = () => {
         </ul>
       </div>
       <div>
-        <img
+        <Image
           src="https://avatars.githubusercontent.com/u/123584259?v=4"
           alt="Foto de Perfil Daniel"
+          unoptimized
+          width={500}
+          height={500}
         />
         <p>
           <span>Em busca da primeira oportunidade na área dev</span>
