@@ -1,5 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: "500",
+});
 
 const NotFound = () => {
   return (
@@ -7,13 +13,19 @@ const NotFound = () => {
       <Head>
         <title>404 | Daniel</title>
       </Head>
-      <div>
-        <h1>404</h1>
-        <div>
-          <p>Page Not Found</p>
+      <div className="flex flex-col items-center text-center mt-12 md:mt-24 gap-8 md:gap-4 px-6 md:px-32 ">
+        <h1 className="text 5xl sm:text-7xl font-bold">404</h1>
+        <p className="flex flex-col gap-8 md:gap-4 md:text-xl">
+          <span>Oops, não conseguimos encontrar essa página!</span>
           <span>Clique no botão abaixo para voltar para a Página Inicial</span>
-        </div>
-        <Link href="/">Ir para Página Inicial</Link>
+        </p>
+
+        <Link
+          href="/"
+          className={`${roboto.className} p-4 bg-h-blue-500 rounded-xl text-black first-line:transition-all first-line:hover:bg-opacity-80 mt-5 md:mt-12 md:text-xl w-fit`}
+        >
+          Ir para Página Inicial
+        </Link>
       </div>
     </>
   );
