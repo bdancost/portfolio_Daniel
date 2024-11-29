@@ -19,7 +19,7 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
         className="w-full bg-h-blue-900 h-96 shadow-md py-4 px-5"
         onClick={(e) => e.stopPropagation()}
       >
-        <div>
+        <div className="flex justify-between mb-5">
           <Link href="/">
             <Image
               src="/next-env.d.png"
@@ -28,14 +28,18 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
               alt="Ícone da letra"
             />
           </Link>
-          <button>
+          <button onClick={onClose}>
             <MenuCloseIcon className="fill-white w-10 h-10" />
           </button>
         </div>
-        <nav>
-          <Link href="/">Sobre mim</Link>
-          {/*<Link href="/portfolio">Portfolio</Link>*/}
-          <Link href="/contatos">Entre em contato</Link>
+        <nav className="flex flex-col gap-5 text-xl p-5 items-center">
+          <Link href="/" onClick={onClose}>
+            Sobre mim
+          </Link>
+          {/*<Link href="/portfolio" onClick={onClose}>Portfolio</Link>*/}
+          <Link href="/contatos" onClick={onClose}>
+            Entre em contato
+          </Link>
         </nav>
       </div>
     </div>
