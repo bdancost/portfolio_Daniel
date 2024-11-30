@@ -17,7 +17,8 @@ export const AboutMe = () => {
         </h1>
         <div className="mb-12">
           <h2 className={`${roboto.className} mb-12`}>
-            Sou um desenvolvedor Front-end em busca por novos desafios
+            Desenvolvedor Front-end em crescimento, em constante evolução,
+            pronto para novos desafios.
           </h2>
           <Link
             href="/contatos"

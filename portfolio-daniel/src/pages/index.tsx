@@ -46,7 +46,7 @@ const Home = () => {
         <title>Sobre mim | Daniel</title>
         <meta
           name="description"
-          content="Sou um desenvolvedor Front-end em busca por novos desafios"
+          content="Desenvolvedor Front-end em crescimento, em constante evolução, pronto para novos desafios."
         />
       </Head>
       <div className="py-12 px-6 md:px-32 space-y-10s md:space-y-28">
