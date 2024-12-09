@@ -1,45 +1,19 @@
+import { AboutMe } from "@/components/Home/AboutMe";
+import { Projects } from "@/components/Home/Projects";
+import { Project, AboutMe as TAboutMe } from "@/types/Home";
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import { Projects } from "../components/Home/Projects";
-import { AboutMe } from "../components/Home/AboutMe";
 
-const Home = () => {
-  const projects = [
-    {
-      slug: "Burguer-Dev",
-      name: "Burguer Dev",
-      image: {
-        url: "/pagina_inicial.png",
-        alt: "Pagina Inicial do Burguer Dev",
-      },
-    },
+interface HomeProps {
+  home: {
+    aboutMe: TAboutMe;
+    projects: Project[];
+  };
+}
 
-    {
-      slug: "Spotify",
-      name: "Spotify",
-      image: {
-        url: "/spotify.png",
-        alt: "Pagina Inicial de uma projeto de Spotify",
-      },
-    },
+const Home = ({ home }: HomeProps) => {
+  const { projects, aboutMe } = home;
 
-    {
-      slug: "Alura-Quiz",
-      name: "Alura Quiz",
-      image: {
-        url: "/alura_quiz.png",
-        alt: "Pagina Inicial do Alura Quiz",
-      },
-    },
-
-    {
-      slug: "Github-API",
-      name: "GitHub API",
-      image: {
-        url: "/github_api.png",
-        alt: "Pagina Inicial do GitHub API",
-      },
-    },
-  ];
   return (
     <>
       <Head>
@@ -50,11 +24,28 @@ const Home = () => {
         />
       </Head>
       <div className="py-12 px-6 md:px-32 space-y-10s md:space-y-28">
-        <AboutMe />
+        <AboutMe aboutMe={aboutMe} />
         <Projects projects={projects} />
       </div>
     </>
   );
+};
+
+const loadHome = async () => {
+  const res = await fetch(
+    "https://gist.githubusercontent.com/bdancost/65920e2bdf98722802159c3a1f86518e/raw/f721d11af9d8ee1199f704504d91704f14578bb4/gistfile1.txt"
+  );
+  const home = await res.json();
+
+  return home;
+};
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const home = await loadHome();
+
+  return {
+    props: { home },
+  };
 };
 
 export default Home;
