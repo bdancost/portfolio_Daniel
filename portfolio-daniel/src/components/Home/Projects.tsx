@@ -19,7 +19,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                 alt={image.alt}
                 width={300}
                 height={300}
-                className="object-cover rounded-2xl h-[18.75rem] mb-4"
+                className="object-cover rounded-2xl h-[18.75rem] mb-4 hoverable"
               />
               <span>{name}</span>
               <div className="bg-h-blue-500 rounded-xl w-12 h-12 text-center flex justify-center items-center text-3xl absolute bottom-[1.25rem] right-[-1.25rem]">
