@@ -45,7 +45,7 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
       </div>
       <div className="relative">
         <Image
-          src={pfp.image.url}
+          src={pfp.image.foto}
           alt={pfp.image.alt}
           unoptimized
           width={500}
