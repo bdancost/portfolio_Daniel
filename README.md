@@ -1,5 +1,5 @@
 
-````markdown
+
 # 🌐 Portfolio Daniel
 
 Este é o repositório do meu portfólio pessoal, criado para apresentar minhas habilidades, projetos e formas de contato. É um projeto moderno, responsivo e construído com as melhores práticas de desenvolvimento.
@@ -42,7 +42,7 @@ portfolio-daniel/
 ├── public/
 │   └── assets/
 └── README.md
-```
+
 ````
 
 ## 🔧 Instalação e Execução
