@@ -13,7 +13,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
       <ul className="flex flex-wrap gap-10 justify-center xl:justify-start ">
         {projects.map(({ url, name, image }, index) => (
           <li className="text-md relative" key={name + index}>
-            <Link href={url}>
+            <Link href={url} target="_blank">
               <Image
                 src={image.foto}
                 alt={image.alt}
