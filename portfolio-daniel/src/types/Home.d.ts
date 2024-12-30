@@ -1,5 +1,5 @@
 export interface Image {
-  url: string;
+  foto: string;
   alt: string;
 }
 
@@ -33,4 +33,5 @@ export interface Project {
   slug: string;
   name: string;
   image: Image;
+  url: string;
 }

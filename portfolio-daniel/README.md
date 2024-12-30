@@ -1,5 +1,3 @@
-Aqui está um exemplo de um README profissional para o seu projeto. Este modelo inclui ícones e destaca as ferramentas usadas no projeto:
-
 ````markdown
 # 🌐 Portfolio Daniel
 

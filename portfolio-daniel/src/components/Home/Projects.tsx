@@ -11,11 +11,11 @@ export const Projects = ({ projects }: ProjectsProps) => {
     <article className="space-y-16 flex flex-col items-center xl:items-start text-center xl_text-left">
       <h2 className="text-2xl md:text-4xl">Projetos Recentes</h2>
       <ul className="flex flex-wrap gap-10 justify-center xl:justify-start ">
-        {projects.map(({ slug, name, image }, index) => (
+        {projects.map(({ url, name, image }, index) => (
           <li className="text-md relative" key={name + index}>
-            <Link href={`/projects/${slug}`}>
+            <Link href={url}>
               <Image
-                src={image.url}
+                src={image.foto}
                 alt={image.alt}
                 width={300}
                 height={300}
